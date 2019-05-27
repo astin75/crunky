@@ -1,2 +1,77 @@
-# crunky
-test
+# 영화 추천기 (크롤링, 필터링)
+사용자 기반 영화 추천 프로그램입니다.사용자가 재미있게 관람한 영화 제목을 입력했을때 해당 영화를 기준으로 추천 해주는 시스템 입니다. 
+
+# 1. 자료 모으기 
+: 크롤링을 통해 사용자 정보를 모아 CSV 파일 형식으로 저장 합니다. 
+
+네이버 영화 <https://movie.naver.com/movie/bi/mi/basic.nhn?code=136900>
+
+---------------------------------------
+1-1. 개요(최대3개), 감독(최대2명), 출연(최대3명) 자료를 크롤링 해옵니다. 
+<img src="https://user-images.githubusercontent.com/51067085/58396538-0f2c9b80-8088-11e9-85bb-1a41a33e6453.jpg">
+
+---------------------------------------
+
+1-2. 평점, 영화제목, 아이디를 가져옵니다. 
+<img src="https://user-images.githubusercontent.com/51067085/58397143-a2ff6700-808a-11e9-8314-2bf305ac5f63.jpg">
+
+---------------------------------------
+
+1-3. [최종파일모습] 아이디, 영화제목, 평점, 무비포스터,영화감독1, 영화감독2, 배우1, 배우2, 배우3, 장르1, 장르2, 장르3
+<img src="https://user-images.githubusercontent.com/51067085/58397498-37b69480-808c-11e9-9cdf-68d1d67c09ce.PNG">
+
+code
+
+# 2. 영화 추천 알고리즘 
+: 수집한 데이터로 필터링과 각 데이터의 가중치를주어 최적의 추천 영화를 갖는 것을 목적으로 합니다. 
+
+---------------------------------------
+2-1 영화 검색 
+python difflib 패키지를 이용해 DB에있는 영화 중 가장 유사한 단어를 가진 영화5개를 출력하고, 올바른 진행을 위해 유저가 의도한 영화를 선택 할 수 있게 합니다.
+
+<검색창>
+<img src="https://user-images.githubusercontent.com/51067085/58404159-7ace3300-809f-11e9-854c-184fcac28eae.jpg">
+
+<검색 결과 창>
+<img src="https://user-images.githubusercontent.com/51067085/58404172-7e61ba00-809f-11e9-89d7-7b276bb483d2.jpg">
+
+---------------------------------------
+2-2 추천 알고리즘 
+a1. 검색결과에서 사용자가 선택한 영화의 제목을 DB에서 검색합니다. 해당 검색 결과에서 userid만 따로 저장합니다.
+
+<img src="https://user-images.githubusercontent.com/51067085/58404976-5d9a6400-80a1-11e9-96c9-200e6f9cc54a.jpg">
+
+a2. [ a1 ]에서 만든 userid 변수를 활용해 다시 한번 DB에서 검색합니다. 
+(최초 사용자가 입력한 영화를 본 사람의 영화리스트를 불러 옵니다 )
+
+<img src="https://user-images.githubusercontent.com/51067085/58405438-63447980-80a2-11e9-877e-a7ce7b32296e.jpg">
+
+a3. [ a2 ]의 결과를 기준으로 중복된 영화를 모두 그룹화 합니다. 
+
+<img src="https://user-images.githubusercontent.com/51067085/58406037-b8cd5600-80a3-11e9-9c09-8c156f13b9e8.jpg">
+
+a4. 그룹화한 결과를 백분위 시켜 줍니다. <영화 타이틀 변수 완료>
+
+<img src="https://user-images.githubusercontent.com/51067085/58406046-bcf97380-80a3-11e9-9660-af9802740c2e.PNG">
+
+---------------------------------------
+
+3-1 [ 2 ] 에서 했던 작업을 똑같이, 감독, 배우 그리고 장르에도 같은 방식으로 DataFrame을 생성 합니다. 
+
+<img src="https://user-images.githubusercontent.com/51067085/58407515-ebc51900-80a6-11e9-8d20-24b91837a226.jpg">
+
+3-2 가중치 주기
+각 열이 갖는 데이터의 가치가 다르기 때문에 가중치를 주었습니다. 
+(가중치는 영화 타이틀에 가장 많은 가중치를 주고, 영화 감독과 배우가 결과에 영향을 줄 수 있도록 설정 했습니다.)
+
+<img src="https://user-images.githubusercontent.com/51067085/58407528-f089cd00-80a6-11e9-92e7-a09ea62967c6.PNG">
+
+4. 추천 결과 
+
+<img src="https://user-images.githubusercontent.com/51067085/58407703-67bf6100-80a7-11e9-9b04-27d87f0578d1.PNG">
+
+
+
+
+
+
