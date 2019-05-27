@@ -62,7 +62,9 @@ a4. 그룹화한 결과를 백분위 시켜 줍니다. <영화 타이틀 변수 
 <img src="https://user-images.githubusercontent.com/51067085/58407515-ebc51900-80a6-11e9-8d20-24b91837a226.jpg">
 
 3-2 가중치 주기
+
 각 열이 갖는 데이터의 가치가 다르기 때문에 가중치를 주었습니다. 
+
 (가중치는 영화 타이틀에 가장 많은 가중치를 주고, 영화 감독과 배우가 결과에 영향을 줄 수 있도록 설정 했습니다.)
 
 <img src="https://user-images.githubusercontent.com/51067085/58407528-f089cd00-80a6-11e9-92e7-a09ea62967c6.PNG">
