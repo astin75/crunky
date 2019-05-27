@@ -57,6 +57,8 @@ a4. 그룹화한 결과를 백분위 시켜 줍니다. <영화 타이틀 변수 
 
 ---------------------------------------
 
+#3. 가중치 주기
+
 3-1 [ 2 ] 에서 했던 작업을 똑같이, 감독, 배우 그리고 장르에도 같은 방식으로 DataFrame을 생성 합니다. 
 
 <img src="https://user-images.githubusercontent.com/51067085/58407515-ebc51900-80a6-11e9-8d20-24b91837a226.jpg">
@@ -69,7 +71,7 @@ a4. 그룹화한 결과를 백분위 시켜 줍니다. <영화 타이틀 변수 
 
 <img src="https://user-images.githubusercontent.com/51067085/58407528-f089cd00-80a6-11e9-92e7-a09ea62967c6.PNG">
 
-4. 추천 결과 
+#4. 추천 결과 
 
 <img src="https://user-images.githubusercontent.com/51067085/58407703-67bf6100-80a7-11e9-9b04-27d87f0578d1.PNG">
 
