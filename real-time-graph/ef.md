@@ -41,5 +41,5 @@
 
 자 이제 데이터의 수가 50,000행이 될때까지 위에 작업을 반복하는 과정을 보여 드리겠습니다. 
 
-[![예제](http://img.youtube.com/vi/RlQEoJaLQRA/0.jpg)](https://youtu.be/RlQEoJaLQRA?t=0s) 
+[![예제](https://user-images.githubusercontent.com/51067085/58463028-11692580-816e-11e9-8c53-de253d687ecc.jpg)](https://www.youtube.com/watch?v=gxUswuAfNJE) 
 
