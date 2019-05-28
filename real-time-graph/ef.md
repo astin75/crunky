@@ -43,3 +43,12 @@
 
 [![예제](https://user-images.githubusercontent.com/51067085/58463028-11692580-816e-11e9-8c53-de253d687ecc.jpg)](https://www.youtube.com/watch?v=gxUswuAfNJE) 
 
+# 그래프 설명
+1. 크롤링창
+2. 채팅창
+3. 그래프창 
+  3-1 Time : 실제시간
+  3-2 File size : csv 파일 사이즈 
+  3-3 Table row : csv 행 
+4. 데이터의 1행이 만들어 질때마다 포인트를 찍어 서울지도 모형을 만듭니다. 
+<img src='https://user-images.githubusercontent.com/51067085/58464008-e253b380-816f-11e9-8a8e-5412358e5ba2.jpg'>
